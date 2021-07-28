@@ -23,7 +23,6 @@ console.log(supplyChanges.pop())
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
 console.log(supplyChanges.push(25));
-console.log(supplyChanges);
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
@@ -37,9 +36,13 @@ for (let i = 0; i < supplyChanges.length; i++){
   } else if (supplyChanges[i] === 0){
     console.log("No change")
   } else {
-    console.log("Removed", supplyChanges[i], "parts." )
+    console.log("Removed", supplyChanges[i]*-1, "parts." )
   }
 }
+
+//In the "else" statement above the array value is multiplied by -1 to transform it into
+//a positive number, this avoids the double negative of "Removed a neagative number"
+
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
@@ -52,7 +55,7 @@ for (let index of supplyChanges){
   } else if (index === 0){
     console.log("No change")
   } else {
-    console.log("Removed", index, "parts." )
+    console.log("Removed", index*-1, "parts." )
   }
 }
 
@@ -67,7 +70,7 @@ while (i < supplyChanges.length) {
   } else if (supplyChanges[i] === 0){
     console.log("No change")
   } else {
-    console.log("Removed", supplyChanges[i], "parts." )
+    console.log("Removed", supplyChanges[i]*-1, "parts." )
   } i++
 }
 
