@@ -85,4 +85,17 @@ while (x < supplyChanges.length) {
   totalSupplies+=supplyChanges[x];
   x++;
 }
-console.log(totalSupplies)
+console.log(totalSupplies);
+
+//Completing #9 using recusion (got some help from a programmer friend on this)
+
+function arrayCounter(arr){
+  if (arr.length===0){ //base case to end the recursion
+    return 0;
+  } else {
+    let currentElement = arr.pop(); //taking the last variable off the array
+    return currentElement + arrayCounter(arr); //adding that last element to the next last element and the next last element...
+  }
+}
+
+console.log(arrayCounter(supplyChanges));
